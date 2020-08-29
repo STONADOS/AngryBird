@@ -18,10 +18,9 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
 
-    
     ground = new Ground(600,height,1200,20);
 
-    platform = new Ground(100,300,200,200);
+    platform = new Ground(100,305,300,175);
 
     box1 = new Box(700,320,70,70);
     box2 = new Box(920,320,70,70);
@@ -40,17 +39,19 @@ function setup(){
 
     // log6 = new Log(230, 180, 80, PI/2);
 
-    bird = new Bird(100,100);
+    bird = new Bird(200,50);
 
-    slingshot = new SlingShot(bird.body, {x:200, y:100});
+    slingshot = new SlingShot(bird.body, {x:200, y:50});
+
+
 }
 
 function draw(){
     background(backgroundImg);
     Engine.update(engine);
-    console.log(box2.body.position.x);
-    console.log(box2.body.position.y);
-    console.log(box2.body.angle);
+    // console.log(box2.body.position.x);
+    // console.log(box2.body.position.y);
+    // console.log(box2.body.angle);
     box1.display();
     box2.display();
     ground.display();
