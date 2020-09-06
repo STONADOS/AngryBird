@@ -9,7 +9,7 @@ display(){
     super.display();
   }
   else{
-    push();
+    push(); 
     this.Visiblity -= 5;
     tint(255, this.Visiblity);
     image(this.image, this.body.position.x, this.body.position.y, 50 ,50);
